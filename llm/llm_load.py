@@ -1,7 +1,7 @@
 def get_api_config(api_name):
     # 读取key.csv文件获取api_name对应的API密钥
     import pandas as pd
-    df = pd.read_csv('key.csv')
+    df = pd.read_csv('configs/key.csv')
     # 使用loc方法根据api查api_key
     api_key = df.loc[df['api'] == api_name, 'api_key'].values[0]
     api_url = df.loc[df['api'] == api_name, 'api_url'].values[0]
